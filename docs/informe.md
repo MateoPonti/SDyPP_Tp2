@@ -1,26 +1,5 @@
 # Informe TP2
 
-## Metricas
-
-Usar dos terminales y `EXECUTOR=local`: iniciar `hit2.server:app` con
-`WORKERS=N` en la primera; en la segunda ejecutar
-`python hit2/benchmark.py --workers N --tasks 100`. Repetir para `N=1,2,4,8`;
-detener y reiniciar el servidor cada vez que cambie `WORKERS`. `--workers`
-etiqueta el resultado, no configura el servidor. Repetir las corridas y
-completar la tabla.
-
-Las operaciones locales son muy rápidas; los resultados reflejan sobre todo
-HTTP/concurrencia y no el rendimiento de Docker.
-
-| Workers | Tareas | Tiempo total (s) | Throughput (tareas/min) | Speedup |
-|---:|---:|---:|---:|---:|
-| 1 | pendiente | pendiente | pendiente | 1.00 |
-| 2 | pendiente | pendiente | pendiente | pendiente |
-| 4 | pendiente | pendiente | pendiente | pendiente |
-| 8 | pendiente | pendiente | pendiente | pendiente |
-
-Discutir el limite con la ley de Amdahl y medir CPU, memoria, I/O, red y Docker daemon.
-
 ## Tolerancia a fallos
 
 En `/cluster/status`, `last_election_ms` es la duracion de la eleccion y
@@ -37,7 +16,7 @@ reintento puede duplicar trabajo no idempotente.
 
 ## Herramientas de IA y conclusiones
 
-Documentar herramientas utilizadas, asistencia recibida, decisiones verificadas y conclusiones de las mediciones.
+Documentar herramientas utilizadas, asistencia recibida y decisiones verificadas.
 
 ## Limitaciones conocidas (Hit 3)
 
