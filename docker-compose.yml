@@ -1,0 +1,50 @@
+services:
+  task-service:
+    build:
+      context: .
+      dockerfile: task_service/Dockerfile
+    image: tp2-task-service:latest
+    networks: [tp2]
+  server-1:
+    build: .
+    environment:
+      EXECUTOR: docker
+      NODE_ID: 1
+      WORKERS: 2
+      PEERS: 2=http://server-2:8000
+      HEARTBEAT_INTERVAL: 1.0
+      STARTUP_DELAY: 1.0
+      TASK_NETWORK: tp2
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - server1-logs:/app/logs
+    networks: [tp2]
+    depends_on: [task-service]
+  server-2:
+    build: .
+    environment:
+      EXECUTOR: docker
+      NODE_ID: 2
+      WORKERS: 2
+      PEERS: 1=http://server-1:8000
+      HEARTBEAT_INTERVAL: 1.0
+      STARTUP_DELAY: 1.0
+      TASK_NETWORK: tp2
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - server2-logs:/app/logs
+    networks: [tp2]
+    depends_on: [task-service]
+  nginx:
+    image: nginx:1.27-alpine
+    ports: ["8000:8000"]
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks: [tp2]
+    depends_on: [server-1, server-2]
+networks:
+  tp2:
+    name: tp2
+volumes:
+  server1-logs:
+  server2-logs:
