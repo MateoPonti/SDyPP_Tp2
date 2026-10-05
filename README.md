@@ -3,6 +3,15 @@
 Implementacion en Python de los tres hits del Trabajo Practico 2. La lectura
 recomendada es seguir los README de cada hit en orden.
 
+## Integrantes
+
+**Grupo 2 — unopromociona**
+
+- María Agustina Ortiz
+- Federico Nicolás Kasparian
+- Justino Bernal
+- Mateo Daniel Ponti
+
 ## Estructura
 
 - `hit1/`: tareas remotas en contenedores Docker.
