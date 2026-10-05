@@ -2,7 +2,15 @@
 
 ## Metricas
 
-Ejecutar `hit2/benchmark.py` con `--workers 1`, `2`, `4` y `8`, repetir cada medicion y completar la tabla:
+Usar dos terminales y `EXECUTOR=local`: iniciar `hit2.server:app` con
+`WORKERS=N` en la primera; en la segunda ejecutar
+`python hit2/benchmark.py --workers N --tasks 100`. Repetir para `N=1,2,4,8`;
+detener y reiniciar el servidor cada vez que cambie `WORKERS`. `--workers`
+etiqueta el resultado, no configura el servidor. Repetir las corridas y
+completar la tabla.
+
+Las operaciones locales son muy rápidas; los resultados reflejan sobre todo
+HTTP/concurrencia y no el rendimiento de Docker.
 
 | Workers | Tareas | Tiempo total (s) | Throughput (tareas/min) | Speedup |
 |---:|---:|---:|---:|---:|

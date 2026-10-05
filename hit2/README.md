@@ -32,17 +32,18 @@ Cada request lleva `lamport_timestamp`; el servidor ejecuta `receive(remote)` al
 
 ## Ejecucion y medicion
 
+Usa dos terminales. En la primera, configura e inicia el servidor:
+
 ```powershell
-$env:WORKERS = "1" # repetir con 2, 4 y 8
 $env:EXECUTOR = "local"
+$env:WORKERS = "1"
 python -m uvicorn hit2.server:app
-python client.py --calculation multiply 3 4
 ```
 
-Para iniciar el servidor especificamente desde esta carpeta:
+En la segunda, desde la raiz del proyecto, corre:
 
 ```powershell
-python -m uvicorn hit2.server:app --port 8000
+python hit2/benchmark.py --workers 1 --tasks 100
 ```
 
 ## Lamport
@@ -54,14 +55,13 @@ depender de la hora fisica de cada proceso.
 
 ## Experimento
 
-```powershell
-python hit2/benchmark.py --workers 1 --tasks 100
-python hit2/benchmark.py --workers 2 --tasks 100
-python hit2/benchmark.py --workers 4 --tasks 100
-python hit2/benchmark.py --workers 8 --tasks 100
-```
-
-Registrar para cada valor: cantidad de tareas, tiempo total y tareas por minuto. La tabla y grafica final deben incluir speedup respecto de un worker y discutir CPU, memoria, I/O, red y daemon Docker como recursos compartidos.
+Repite con `WORKERS=1`, `2`, `4` y `8`. Para cada valor, detén el servidor con
+`Ctrl+C`, cambia `WORKERS` en la primera terminal y reinícialo; en la segunda,
+ejecuta `python hit2/benchmark.py --workers N --tasks 100`, usando el mismo
+valor `N`. `--workers` solo etiqueta el resultado; `WORKERS` configura el
+servidor. Registra tiempo y throughput en `docs/informe.md` y crea la gráfica.
+Como las operaciones locales son muy rápidas, los resultados reflejan sobre
+todo el costo HTTP/concurrencia, no Docker.
 
 ## Arquitectura
 

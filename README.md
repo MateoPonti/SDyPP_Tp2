@@ -49,12 +49,25 @@ python -m pytest -q
 
 ## Benchmark
 
-Con el servidor en modo local, repetir para `1`, `2`, `4` y `8` workers:
+No requiere deploy ni Docker. Usa dos terminales:
 
-```powershell
-$env:WORKERS = "4"
-python -m uvicorn hit2.server:app
-python hit2/benchmark.py --workers 4 --tasks 100
-```
+1. **Terminal 1:** configura e inicia el servidor:
 
-Los resultados deben copiarse a `docs/informe.md` y acompañarse con una gráfica.
+   ```powershell
+   $env:EXECUTOR = "local"
+   $env:WORKERS = "1"
+   python -m uvicorn hit2.server:app
+   ```
+
+2. **Terminal 2:** ejecuta la medición:
+
+   ```powershell
+   python hit2/benchmark.py --workers 1 --tasks 100
+   ```
+
+Repite con `2`, `4` y `8`: detén el servidor (`Ctrl+C`), cambia `WORKERS`,
+reinícialo y usa el mismo valor en `--workers`. Este argumento solo etiqueta
+el resultado; no configura el servidor. Repite las corridas y copia tiempo y
+throughput a `docs/informe.md` para hacer la gráfica. El executor local es muy
+rápido, así que los tiempos pueden ser ruidosos y no miden el rendimiento de
+Docker.
