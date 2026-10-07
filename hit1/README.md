@@ -78,3 +78,14 @@ flowchart LR
 - FastAPI para contratos JSON y health checks.
 - `TaskExecutor` desacopla Docker de las pruebas.
 - El modo `local` permite desarrollo sin Docker; el modo `docker` es el de despliegue.
+
+
+## Docker Hub
+
+- La imagen del servicio tarea se publica en Docker Hub desde el CI (job `publish`) usando el
+  secret `DOCKERHUB_TOKEN` (access token, no la contraseña) y la variable `DOCKERHUB_USERNAME`
+  de GitHub. Nada de esto está en el repositorio.
+- El servidor descarga la imagen indicada en `task.image` si no está en el host
+  (`DockerTaskExecutor._ensure_image`). Si el repositorio es privado, el host debe tener hecho
+  `docker login` previamente con un access token de solo lectura; el request nunca lleva credenciales.
+- Docker Hub no ofrece federación OIDC, por eso se usa un token acotado guardado en GitHub Secrets.

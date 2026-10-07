@@ -1,0 +1,74 @@
+NOTA DE CAMBIOS - TP2
+Fecha: 05/10/2026
+
+Esta version integra en la carpeta Tp2 los cambios previos de Hit 3 y las
+mejoras de coordinacion y asignacion solicitadas. Se conserva la limitacion de
+que el failover real con contenedores debe validarse con Docker activo.
+
+CAMBIOS APLICADOS
+
+1. Eleccion Bully
+- La eleccion usa mensajes ELECTION, OK y COORDINATOR entre nodos.
+- Se limpia la senal de espera antes de consultar nodos mayores, para no perder
+  un anuncio COORDINATOR que llegue durante la consulta.
+- Un nodo rechaza un anuncio COORDINATOR con un ID menor que el suyo e inicia
+  una eleccion.
+- Se documentan y configuran HEARTBEAT_INTERVAL y STARTUP_DELAY.
+- PEERS utiliza pares ID=URL; se actualizo docker-compose.yml y el README.
+
+2. Asignacion coordinada de tareas
+- Las solicitudes que llegan a un nodo seguidor se reenvian al coordinador.
+- El coordinador consulta /health de los pares y observa cola, workers activos
+  y disponibilidad.
+- El coordinador guarda un registro en memoria de los nodos observados,
+  incluyendo estado y ultima vez visto; se expone en /cluster/status.
+- Se asigna cada tarea al nodo disponible con menor carga aproximada
+  (queue_size + active_workers).
+- Se agrego /cluster/execute para ejecutar una tarea en el pool local de un
+  nodo seleccionado.
+- Si un intento remoto falla, el coordinador intenta el siguiente nodo
+  disponible.
+
+3. Metricas de tolerancia a fallos
+- /cluster/status expone last_election_ms, duracion de la eleccion.
+- Tambien expone last_failover_ms, medido desde que un nodo detecta que el
+  lider no responde hasta que acepta o anuncia al nuevo coordinador.
+- Esta medicion no incluye el tiempo desde la caida real hasta el siguiente
+  heartbeat; se documenta como medir ese intervalo por separado.
+
+4. Pruebas
+- Se agregaron pruebas de eleccion simultanea, caida y recuperacion del lider,
+  retorno de nodo con ID mayor, anuncio temprano COORDINATOR y rechazo de un
+  coordinador con ID menor.
+- Se agregaron pruebas para seleccionar el nodo menos cargado y reintentar en
+  otro nodo si el primero no esta disponible.
+- Se agrego pytest-asyncio a las dependencias de prueba.
+
+5. Documentacion y limpieza
+- Se corrigieron los README de Hit 1, Hit 2 y Hit 3, el README raiz y
+  docs/informe.md para reflejar las rutas y comportamiento actuales.
+- Se quitaron los archivos Python duplicados obsoletos de app/ y el
+  benchmark.py de la raiz; el benchmark vigente esta en hit2/benchmark.py.
+- Esta nota se incluye en la raiz del proyecto.
+
+VALIDACION REALIZADA
+
+- pytest -q: 13 pruebas pasaron.
+- Sintaxis Python: 31 archivos parseados sin errores.
+- docker compose config --quiet: configuracion valida.
+- No se pudo iniciar Compose ni medir failover real porque el daemon de Docker
+  Desktop no estaba disponible (dockerDesktopLinuxEngine no respondia).
+
+LIMITACIONES QUE NO DEBEN PRESENTARSE COMO GARANTIAS
+
+- El registro de nodos y las colas son en memoria y no se replican en una base
+  durable. Una caida puede perder tareas pendientes o en curso.
+- El reintento es de mejor esfuerzo. Ante un timeout no siempre se puede saber
+  si el nodo remoto alcanzo a ejecutar la tarea; operaciones no idempotentes
+  podrian ejecutarse mas de una vez.
+- Las pruebas de cluster simulan transporte en memoria. No son una medicion de
+  failover entre contenedores ni validan un tiempo como 0.06 segundos.
+- Para comprobar el comportamiento de extremo a extremo hay que iniciar Docker
+  Desktop, ejecutar docker compose up --build, detener el lider y registrar el
+  tiempo desde la caida real hasta la eleccion y el restablecimiento del
+  servicio.

@@ -27,8 +27,22 @@ class DockerTaskExecutor:
         self.timeout = timeout
         self.client = docker.from_env()
 
+    def _ensure_image(self, image: str) -> None:
+        """Descarga la imagen del registro (Docker Hub) si no está en el host.
+
+        La autenticación NO viene en el request: docker-py usa las credenciales que el host
+        ya tiene configuradas (docker login / credential helper / token de corta duración).
+        """
+        import docker.errors
+
+        try:
+            self.client.images.get(image)
+        except docker.errors.ImageNotFound:
+            self.client.images.pull(image)
+
     async def execute(self, task: TaskRequest) -> ExecutionResult:
         started = time.perf_counter()
+        await asyncio.to_thread(self._ensure_image, task.image)
         container = await asyncio.to_thread(
             self.client.containers.run,
             task.image,
