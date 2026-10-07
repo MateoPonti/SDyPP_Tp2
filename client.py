@@ -5,6 +5,7 @@ import urllib.request
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Submit a remote task")
+    
     parser.add_argument("--server", default="http://localhost:8000")
     parser.add_argument("--calculation", choices=["add", "subtract", "multiply", "divide"], default="add")
     parser.add_argument("parameters", nargs="+", type=float)
