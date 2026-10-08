@@ -1,0 +1,1659 @@
+server-2-1  | INFO:     Started server process [1]
+server-2-1  | INFO:     Waiting for application startup.
+server-2-1  | INFO:     Application startup complete.
+server-2-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+server-2-1  | 2026-10-08 00:16:32,729 INFO hit3.election node=2 became coordinator
+server-2-1  | 2026-10-08 00:16:32,766 INFO httpx HTTP Request: POST http://server-1:8000/cluster/coordinator?leader_id=2 "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:46696 - "POST /cluster/election?candidate_id=1 HTTP/1.1" 200 OK
+server-2-1  | 2026-10-08 00:16:32,924 INFO hit3.election node=2 became coordinator
+server-2-1  | 2026-10-08 00:16:32,935 INFO httpx HTTP Request: POST http://server-1:8000/cluster/coordinator?leader_id=2 "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:46710 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46724 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | INFO:     Started server process [1]
+server-1-1  | INFO:     Waiting for application startup.
+server-1-1  | INFO:     Application startup complete.
+server-2-1  | INFO:     172.19.0.4:46730 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46736 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+server-1-1  | 2026-10-08 00:16:32,764 INFO hit3.election node=1 accepted coordinator=2
+server-1-1  | INFO:     172.19.0.3:48162 - "POST /cluster/coordinator?leader_id=2 HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:16:32,925 INFO httpx HTTP Request: POST http://server-2:8000/cluster/election?candidate_id=1 "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:32,934 INFO hit3.election node=1 accepted coordinator=2
+server-2-1  | INFO:     172.19.0.4:59136 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59152 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59162 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | INFO:     172.19.0.3:48178 - "POST /cluster/coordinator?leader_id=2 HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:16:33,943 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:34,953 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:59178 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59182 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59188 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:16:35,964 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:36,972 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:37,983 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:59196 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59202 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59206 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:16:38,992 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:40734 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:16:40,007 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:41,018 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:42,029 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:43,040 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:44,050 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:45,058 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:46,065 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:47,073 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:48,082 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:49,090 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:50,104 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:51,112 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:52,122 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:53,129 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:54,142 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:55,151 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:56,159 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:57,167 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:58,178 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:16:59,187 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:00,198 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:40744 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40750 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40756 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40766 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40776 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40780 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40796 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:17:01,217 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:02,225 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:03,233 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:40800 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40812 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:17:04,241 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:37278 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37282 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37288 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37300 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37308 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37322 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37330 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37332 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:17:05,252 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:06,263 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:37342 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37354 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46512 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46514 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46516 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:17:07,272 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:08,280 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:09,287 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:10,300 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:46518 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46532 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46540 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:17:11,310 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:12,327 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:13,336 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | INFO:     172.19.0.3:34204 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:17:14,194 INFO hit2.pool hit=2 worker=0 task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0 started
+server-1-1  | 2026-10-08 00:17:14,348 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:14,761 ERROR hit2.pool worker=0 task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0 failed
+server-1-1  | Traceback (most recent call last):
+server-2-1  | INFO:     172.19.0.4:46548 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | 2026-10-08 00:17:14,182 INFO httpx HTTP Request: GET http://server-1:8000/health "HTTP/1.1 200 OK"
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  | INFO:     172.19.0.4:46564 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | 2026-10-08 00:17:14,765 INFO httpx HTTP Request: POST http://server-1:8000/cluster/execute "HTTP/1.1 502 Bad Gateway"
+server-2-1  | 2026-10-08 00:17:14,765 WARNING hit3.scheduler node=1 failed task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0: Server error '502 Bad Gateway' for url 'http://server-1:8000/cluster/execute'
+server-1-1  |     yield
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-1-1  |     resp = await self._pool.handle_async_request(req)
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502
+server-2-1  | 2026-10-08 00:17:14,766 INFO hit2.pool hit=2 worker=0 task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0 started
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-1-1  |     raise exc from None
+server-2-1  | 2026-10-08 00:17:15,265 ERROR hit2.pool worker=0 task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0 failed
+server-2-1  | Traceback (most recent call last):
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-1-1  |     response = await connection.handle_async_request(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-1-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-1-1  |     stream = await self._connect(request)
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-1-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-1-1  |     return await self._backend.connect_tcp(
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |     raise exc from None
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-1-1  |     with map_exceptions(exc_map):
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await connection.handle_async_request(
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-2-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-1-1  |     raise to_exc(exc) from exc
+server-1-1  | httpcore.ConnectError: All connection attempts failed
+server-1-1  | 
+server-1-1  | The above exception was the direct cause of the following exception:
+server-2-1  |     stream = await self._connect(request)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 
+server-1-1  | Traceback (most recent call last):
+server-1-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-1-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-1-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-1-1  |     response = await client.post(
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-1-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |     return await self._backend.connect_tcp(
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-1-1  |     return await self.request(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |     with map_exceptions(exc_map):
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-1-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  |     raise to_exc(exc) from exc
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-2-1  | 
+server-1-1  |     response = await self._send_handling_auth(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | The above exception was the direct cause of the following exception:
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-1-1  |     response = await self._send_handling_redirects(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-1-1  |     response = await self._send_single_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-1-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-1-1  |     with map_httpcore_exceptions():
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |     return await self.request(
+server-1-1  |     raise mapped_exc(message) from exc
+server-1-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:17:14,763 ERROR hit3.server_impl task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0 failed
+server-1-1  | Traceback (most recent call last):
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-1-1  |     yield
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-1-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  |     response = await self._send_handling_auth(
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-1-1  |     raise exc from None
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await self._send_handling_redirects(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-1-1  |     response = await connection.handle_async_request(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-1-1  |     raise exc
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-1-1  |     stream = await self._connect(request)
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-1-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |     with map_httpcore_exceptions():
+server-1-1  |     return await self._backend.connect_tcp(
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-1-1  |     with map_exceptions(exc_map):
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 2026-10-08 00:17:15,267 ERROR hit3.server_impl task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0 failed
+server-2-1  | Traceback (most recent call last):
+server-1-1  |     raise to_exc(exc) from exc
+server-1-1  | httpcore.ConnectError: All connection attempts failed
+server-1-1  | 
+server-1-1  | The above exception was the direct cause of the following exception:
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-1-1  | 
+server-1-1  | Traceback (most recent call last):
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-1-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-1-1  |     execution = await pool.submit(task)
+server-1-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |     raise exc from None
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-1-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-1-1  |     return await future
+server-2-1  |     response = await connection.handle_async_request(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |            ^^^^^^^^^^^^
+server-1-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-1-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-1-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-2-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-1-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-1-1  |     response = await client.post(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |     stream = await self._connect(request)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |     return await self.request(
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  |     return await self._backend.connect_tcp(
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-1-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-1-1  |     response = await self._send_handling_auth(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-1-1  |     response = await self._send_handling_redirects(
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  |     with map_exceptions(exc_map):
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-1-1  |     response = await self._send_single_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-2-1  |     raise to_exc(exc) from exc
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-1-1  |     response = await transport.handle_async_request(request)
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-2-1  |     execution = await pool.submit(task)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-2-1  |     return await future
+server-2-1  |            ^^^^^^^^^^^^
+server-1-1  |     with map_httpcore_exceptions():
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-1-1  |     raise mapped_exc(message) from exc
+server-1-1  | httpx.ConnectError: All connection attempts failed
+server-1-1  | INFO:     172.19.0.3:34214 - "POST /cluster/execute HTTP/1.1" 502 Bad Gateway
+server-1-1  | 2026-10-08 00:17:15,272 INFO httpx HTTP Request: POST http://server-2:8000/cluster/dispatch "HTTP/1.1 502 Bad Gateway"
+server-1-1  | 2026-10-08 00:17:15,273 ERROR hit3.server_impl failed to forward task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0 to coordinator=2
+server-1-1  | Traceback (most recent call last):
+server-1-1  |   File "/app/hit3/server_impl.py", line 113, in forward_to_coordinator
+server-1-1  |     response.raise_for_status()
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+server-1-1  |     raise HTTPStatusError(message, request=request, response=self)
+server-1-1  | httpx.HTTPStatusError: Server error '502 Bad Gateway' for url 'http://server-2:8000/cluster/dispatch'
+server-1-1  | For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502
+server-1-1  | INFO:     172.19.0.5:55796 - "POST /getRemoteTask HTTP/1.0" 502 Bad Gateway
+server-1-1  | 2026-10-08 00:17:15,358 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:16,366 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:17,376 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:18,383 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:19,393 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:20,401 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:21,410 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-1-1  | 2026-10-08 00:17:22,428 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:17:23,438 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:24,449 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:25,460 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:26,472 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |     return await self.request(
+server-1-1  | 2026-10-08 00:17:27,482 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:28,491 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:17:29,498 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:30,505 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-1-1  | 2026-10-08 00:17:31,514 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:32,523 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:33,537 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:34,548 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  |     response = await self._send_handling_auth(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:17:35,558 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:36,568 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:37,577 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | INFO:     172.19.0.3:37632 - "GET /health HTTP/1.1" 200 OK
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-2-1  |     response = await self._send_handling_redirects(
+server-1-1  | 2026-10-08 00:17:37,732 INFO hit2.pool hit=2 worker=1 task=995887cc-1259-49fa-91ca-f0ac1ab538bc started
+server-1-1  | 2026-10-08 00:17:38,188 ERROR hit2.pool worker=1 task=995887cc-1259-49fa-91ca-f0ac1ab538bc failed
+server-1-1  | Traceback (most recent call last):
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-1-1  |     yield
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-1-1  |     resp = await self._pool.handle_async_request(req)
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-1-1  |     raise exc from None
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-2-1  |     response = await transport.handle_async_request(request)
+server-1-1  |     response = await connection.handle_async_request(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-1-1  |     raise exc
+server-2-1  |     with map_httpcore_exceptions():
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-1-1  |     stream = await self._connect(request)
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-1-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 2026-10-08 00:17:15,269 WARNING hit3.scheduler node=2 failed task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0: 502: All connection attempts failed
+server-2-1  | 2026-10-08 00:17:15,269 ERROR hit3.server_impl coordinator failed to dispatch task=b1bd5b4f-e3a3-4f04-b89f-2b05b0392cd0
+server-2-1  | Traceback (most recent call last):
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-1-1  |     return await self._backend.connect_tcp(
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-1-1  |     with map_exceptions(exc_map):
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |     raise exc from None
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await connection.handle_async_request(
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-2-1  |     raise exc
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-1-1  |     raise to_exc(exc) from exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-2-1  |     stream = await self._connect(request)
+server-1-1  | httpcore.ConnectError: All connection attempts failed
+server-1-1  | 
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-1-1  | The above exception was the direct cause of the following exception:
+server-1-1  | 
+server-1-1  | Traceback (most recent call last):
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-1-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-1-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-1-1  |     response = await client.post(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |     return await self._backend.connect_tcp(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-1-1  |     return await self.request(
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  |     with map_exceptions(exc_map):
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-2-1  |     raise to_exc(exc) from exc
+server-1-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-2-1  | 
+server-1-1  |     response = await self._send_handling_auth(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-1-1  |     response = await self._send_handling_redirects(
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-2-1  |     execution = await pool.submit(task)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-2-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-2-1  |     return await future
+server-2-1  |            ^^^^^^^^^^^^
+server-1-1  |     response = await self._send_single_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-1-1  |     response = await transport.handle_async_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-1-1  |     with map_httpcore_exceptions():
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |     return await self.request(
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-1-1  |     raise mapped_exc(message) from exc
+server-1-1  | httpx.ConnectError: All connection attempts failed
+server-1-1  | 2026-10-08 00:17:38,189 ERROR hit3.server_impl task=995887cc-1259-49fa-91ca-f0ac1ab538bc failed
+server-1-1  | Traceback (most recent call last):
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-1-1  |     yield
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-1-1  |     resp = await self._pool.handle_async_request(req)
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  |     response = await self._send_handling_auth(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-2-1  |     response = await self._send_handling_redirects(
+server-1-1  |     raise exc from None
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-1-1  |     response = await connection.handle_async_request(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-2-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-1-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |     with map_httpcore_exceptions():
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-1-1  |     stream = await self._connect(request)
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-1-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 
+server-1-1  |     return await self._backend.connect_tcp(
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-1-1  |     with map_exceptions(exc_map):
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/scheduler.py", line 45, in dispatch
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  |     return await run_local(task)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |     raise to_exc(exc) from exc
+server-1-1  | httpcore.ConnectError: All connection attempts failed
+server-1-1  | 
+server-2-1  |   File "/app/hit3/server_impl.py", line 71, in ejecutarTareaEnEsteNodo
+server-2-1  |     raise HTTPException(status_code=502, detail=str(error)) from error
+server-1-1  | The above exception was the direct cause of the following exception:
+server-1-1  | 
+server-2-1  | fastapi.exceptions.HTTPException: 502: All connection attempts failed
+server-2-1  | 
+server-1-1  | Traceback (most recent call last):
+server-1-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 91, in dispatch_at_coordinator
+server-2-1  |     return await scheduler.dispatch(scheduled_task, ejecutarTareaEnEsteNodo)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit3/scheduler.py", line 53, in dispatch
+server-2-1  |     raise RuntimeError("No available node could execute the task") from last_error
+server-2-1  | RuntimeError: No available node could execute the task
+server-2-1  | INFO:     172.19.0.4:46558 - "POST /cluster/dispatch HTTP/1.1" 502 Bad Gateway
+server-2-1  | INFO:     172.19.0.4:46572 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46576 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     execution = await pool.submit(task)
+server-1-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:46430 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46444 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-1-1  |     return await future
+server-2-1  | INFO:     172.19.0.4:46460 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46462 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46466 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |            ^^^^^^^^^^^^
+server-1-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-1-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-1-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-1-1  |     response = await client.post(
+server-2-1  | INFO:     172.19.0.4:46482 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46488 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |                ^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  | INFO:     172.19.0.4:46500 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46502 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     return await self.request(
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:46520 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49790 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-1-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  | INFO:     172.19.0.4:49804 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-1-1  |     response = await self._send_handling_auth(
+server-2-1  | INFO:     172.19.0.4:49820 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49830 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49840 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49842 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-2-1  | INFO:     172.19.0.4:49848 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49858 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     response = await self._send_handling_redirects(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:49862 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-1-1  |     response = await self._send_single_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:49876 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:60044 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | 2026-10-08 00:17:37,725 INFO httpx HTTP Request: GET http://server-1:8000/health "HTTP/1.1 200 OK"
+server-2-1  | 2026-10-08 00:17:38,191 INFO httpx HTTP Request: POST http://server-1:8000/cluster/execute "HTTP/1.1 502 Bad Gateway"
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-1-1  |     response = await transport.handle_async_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-1-1  |     with map_httpcore_exceptions():
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | 2026-10-08 00:17:38,192 WARNING hit3.scheduler node=1 failed task=995887cc-1259-49fa-91ca-f0ac1ab538bc: Server error '502 Bad Gateway' for url 'http://server-1:8000/cluster/execute'
+server-2-1  | For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-2-1  | 2026-10-08 00:17:38,192 INFO hit2.pool hit=2 worker=1 task=995887cc-1259-49fa-91ca-f0ac1ab538bc started
+server-2-1  | INFO:     172.19.0.4:60052 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | 2026-10-08 00:17:38,626 ERROR hit2.pool worker=1 task=995887cc-1259-49fa-91ca-f0ac1ab538bc failed
+server-2-1  | Traceback (most recent call last):
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-1-1  |     raise mapped_exc(message) from exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-1-1  | httpx.ConnectError: All connection attempts failed
+server-1-1  | INFO:     172.19.0.3:37636 - "POST /cluster/execute HTTP/1.1" 502 Bad Gateway
+server-1-1  | 2026-10-08 00:17:38,589 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     raise exc from None
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await connection.handle_async_request(
+server-1-1  | 2026-10-08 00:17:39,606 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:40,616 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:41,623 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:42,641 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-1-1  | 2026-10-08 00:17:43,650 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:44,659 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:45,666 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-2-1  |     stream = await self._connect(request)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:17:46,673 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:47,682 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-1-1  | 2026-10-08 00:17:48,697 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:49,706 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:17:50,714 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:51,723 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:52,731 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  |     return await self._backend.connect_tcp(
+server-1-1  | 2026-10-08 00:17:53,741 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:54,750 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-1-1  | 2026-10-08 00:17:55,758 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:56,767 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:57,776 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:58,784 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:17:59,798 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:00,807 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:01,814 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:02,822 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:03,830 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     with map_exceptions(exc_map):
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-1-1  | 2026-10-08 00:18:04,838 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  |     raise to_exc(exc) from exc
+server-1-1  | 2026-10-08 00:18:05,847 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:06,856 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-1-1  | 2026-10-08 00:18:07,863 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:08,871 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-1-1  | 2026-10-08 00:18:09,879 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:10,893 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:11,903 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:12,911 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:13,921 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-1-1  | 2026-10-08 00:18:14,931 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:15,939 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-1-1  | 2026-10-08 00:18:16,946 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-1-1  | 2026-10-08 00:18:17,954 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     return await self.request(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:18:18,961 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:19,969 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-1-1  | 2026-10-08 00:18:20,977 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:21,998 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:18:23,007 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:24,016 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:25,024 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  |     response = await self._send_handling_auth(
+server-1-1  | 2026-10-08 00:18:26,032 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:27,040 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:28,048 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:29,058 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:30,067 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-2-1  |     response = await self._send_handling_redirects(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-1-1  | 2026-10-08 00:18:31,077 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:32,085 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-1-1  | 2026-10-08 00:18:33,102 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:34,113 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:35,124 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:18:36,136 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:37,145 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:38,154 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:39,163 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:40,173 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |     with map_httpcore_exceptions():
+server-1-1  | 2026-10-08 00:18:41,182 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:42,191 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:18:43,199 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:44,216 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 2026-10-08 00:17:38,627 ERROR hit3.server_impl task=995887cc-1259-49fa-91ca-f0ac1ab538bc failed
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |     raise exc from None
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await connection.handle_async_request(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-2-1  |     raise exc
+server-1-1  | 2026-10-08 00:18:45,226 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:46,234 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-2-1  |     stream = await self._connect(request)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-1-1  | 2026-10-08 00:18:47,247 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:48,257 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  |     return await self._backend.connect_tcp(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  |     with map_exceptions(exc_map):
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  |     raise to_exc(exc) from exc
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-2-1  |     execution = await pool.submit(task)
+server-2-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-2-1  |     return await future
+server-2-1  |            ^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |     return await self.request(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-1-1  | 2026-10-08 00:18:49,265 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:50,274 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-1-1  | 2026-10-08 00:18:51,283 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:52,295 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     response = await self._send_handling_auth(
+server-1-1  | 2026-10-08 00:18:53,305 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:54,314 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:55,330 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:56,340 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:57,350 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:58,358 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:18:59,367 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:00,374 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-2-1  |     response = await self._send_handling_redirects(
+server-1-1  | 2026-10-08 00:19:01,382 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-1-1  | 2026-10-08 00:19:02,390 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-1-1  | 2026-10-08 00:19:03,398 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:04,411 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |     with map_httpcore_exceptions():
+server-1-1  | 2026-10-08 00:19:05,421 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:06,435 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:07,444 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-1-1  | 2026-10-08 00:19:08,452 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-1-1  | 2026-10-08 00:19:09,460 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:10,469 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:11,481 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 2026-10-08 00:17:38,628 WARNING hit3.scheduler node=2 failed task=995887cc-1259-49fa-91ca-f0ac1ab538bc: 502: All connection attempts failed
+server-1-1  | 2026-10-08 00:19:12,489 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:13,497 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | 2026-10-08 00:17:38,628 ERROR hit3.server_impl coordinator failed to dispatch task=995887cc-1259-49fa-91ca-f0ac1ab538bc
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-1-1  | 2026-10-08 00:19:14,508 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:15,515 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |     raise exc from None
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-1-1  | 2026-10-08 00:19:16,523 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:17,540 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:18,549 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:19,558 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:20,569 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:21,580 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:22,587 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:23,595 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:24,607 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:25,616 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     response = await connection.handle_async_request(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:19:26,625 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:27,633 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-1-1  | 2026-10-08 00:19:28,656 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-2-1  |     stream = await self._connect(request)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  |     return await self._backend.connect_tcp(
+server-1-1  | 2026-10-08 00:19:29,665 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  |     with map_exceptions(exc_map):
+server-1-1  | 2026-10-08 00:19:30,680 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:31,689 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-1-1  | 2026-10-08 00:19:32,698 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:33,707 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  |     raise to_exc(exc) from exc
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-1-1  | 2026-10-08 00:19:34,716 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:35,725 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | INFO:     172.19.0.3:37880 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:19:36,536 INFO hit2.pool hit=2 worker=0 task=202255c7-8e73-4e38-baa1-6056bcc20b04 started
+server-1-1  | 2026-10-08 00:19:36,733 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:36,996 ERROR hit2.pool worker=0 task=202255c7-8e73-4e38-baa1-6056bcc20b04 failed
+server-1-1  | Traceback (most recent call last):
+server-2-1  | 
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-2-1  |     execution = await pool.submit(task)
+server-2-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-2-1  |     return await future
+server-2-1  |            ^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-1-1  |     yield
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |     return await self.request(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-1-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |     response = await self._send_handling_auth(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |     raise exc from None
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-1-1  |     response = await connection.handle_async_request(
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |     response = await self._send_handling_redirects(
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-2-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |     stream = await self._connect(request)
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |     with map_httpcore_exceptions():
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 
+server-1-1  |     return await self._backend.connect_tcp(
+server-2-1  | The above exception was the direct cause of the following exception:
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-1-1  |     with map_exceptions(exc_map):
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-1-1  |     raise to_exc(exc) from exc
+server-1-1  | httpcore.ConnectError: All connection attempts failed
+server-1-1  | 
+server-1-1  | The above exception was the direct cause of the following exception:
+server-1-1  | 
+server-1-1  | Traceback (most recent call last):
+server-1-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-1-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-1-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-1-1  |     response = await client.post(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-1-1  |     return await self.request(
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-1-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-1-1  |     response = await self._send_handling_auth(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-1-1  |     response = await self._send_handling_redirects(
+server-2-1  |   File "/app/hit3/scheduler.py", line 45, in dispatch
+server-2-1  |     return await run_local(task)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit3/server_impl.py", line 71, in ejecutarTareaEnEsteNodo
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |     raise HTTPException(status_code=502, detail=str(error)) from error
+server-2-1  | fastapi.exceptions.HTTPException: 502: All connection attempts failed
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-1-1  |     response = await self._send_single_request(request)
+server-2-1  | 
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 91, in dispatch_at_coordinator
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-1-1  |     response = await transport.handle_async_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |     return await scheduler.dispatch(scheduled_task, ejecutarTareaEnEsteNodo)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit3/scheduler.py", line 53, in dispatch
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-1-1  |     with map_httpcore_exceptions():
+server-2-1  |     raise RuntimeError("No available node could execute the task") from last_error
+server-2-1  | RuntimeError: No available node could execute the task
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  | INFO:     172.19.0.5:40264 - "POST /getRemoteTask HTTP/1.0" 502 Bad Gateway
+server-1-1  |     raise mapped_exc(message) from exc
+server-2-1  | INFO:     172.19.0.4:60062 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:60074 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | httpx.ConnectError: All connection attempts failed
+server-1-1  | 2026-10-08 00:19:36,998 ERROR hit3.server_impl task=202255c7-8e73-4e38-baa1-6056bcc20b04 failed
+server-2-1  | INFO:     172.19.0.4:60088 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:60102 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:60110 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | Traceback (most recent call last):
+server-2-1  | INFO:     172.19.0.4:60122 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:60130 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:60136 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49342 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-1-1  |     yield
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-1-1  |     resp = await self._pool.handle_async_request(req)
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:49352 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49356 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-1-1  |     raise exc from None
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  | INFO:     172.19.0.4:49364 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49374 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     response = await connection.handle_async_request(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:49378 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49384 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49390 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-1-1  |     raise exc
+server-2-1  | INFO:     172.19.0.4:49404 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:49410 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:55950 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-1-1  |     stream = await self._connect(request)
+server-2-1  | INFO:     172.19.0.4:55958 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:55960 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:55964 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:55970 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  | INFO:     172.19.0.4:55976 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:55990 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  | INFO:     172.19.0.4:55992 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:56006 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:56008 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-1-1  |     return await self._backend.connect_tcp(
+server-2-1  | INFO:     172.19.0.4:52298 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:52304 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:52316 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:52328 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:52340 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  | INFO:     172.19.0.4:52354 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     with map_exceptions(exc_map):
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-2-1  | INFO:     172.19.0.4:52370 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  | INFO:     172.19.0.4:52378 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     raise to_exc(exc) from exc
+server-2-1  | INFO:     172.19.0.4:52394 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:52400 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | httpcore.ConnectError: All connection attempts failed
+server-1-1  | 
+server-1-1  | The above exception was the direct cause of the following exception:
+server-1-1  | 
+server-2-1  | INFO:     172.19.0.4:53062 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53074 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | Traceback (most recent call last):
+server-2-1  | INFO:     172.19.0.4:53076 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-1-1  |     execution = await pool.submit(task)
+server-1-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-2-1  | INFO:     172.19.0.4:53090 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     return await future
+server-1-1  |            ^^^^^^^^^^^^
+server-1-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  | INFO:     172.19.0.4:53106 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53112 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-2-1  | INFO:     172.19.0.4:53116 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53132 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-2-1  | INFO:     172.19.0.4:53136 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46314 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46324 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46340 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     response = await client.post(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:46348 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-1-1  |     return await self.request(
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:46350 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46362 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-2-1  | INFO:     172.19.0.4:46378 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  | INFO:     172.19.0.4:46390 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46396 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46400 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  | INFO:     172.19.0.4:59056 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59058 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59064 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59072 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59074 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     response = await self._send_handling_auth(
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:59090 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-1-1  |     response = await self._send_handling_redirects(
+server-2-1  | INFO:     172.19.0.4:59100 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59110 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  | INFO:     172.19.0.4:59114 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:59122 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-1-1  |     response = await self._send_single_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-1-1  |     response = await transport.handle_async_request(request)
+server-1-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-1-1  |     with map_httpcore_exceptions():
+server-2-1  | INFO:     172.19.0.4:44490 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:44496 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-1-1  |     self.gen.throw(value)
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  | INFO:     172.19.0.4:44504 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:44514 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     raise mapped_exc(message) from exc
+server-1-1  | httpx.ConnectError: All connection attempts failed
+server-1-1  | INFO:     172.19.0.3:37884 - "POST /cluster/execute HTTP/1.1" 502 Bad Gateway
+server-2-1  | INFO:     172.19.0.4:44518 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:19:37,457 INFO httpx HTTP Request: POST http://server-2:8000/cluster/dispatch "HTTP/1.1 502 Bad Gateway"
+server-1-1  | 2026-10-08 00:19:37,458 ERROR hit3.server_impl failed to forward task=202255c7-8e73-4e38-baa1-6056bcc20b04 to coordinator=2
+server-1-1  | Traceback (most recent call last):
+server-1-1  |   File "/app/hit3/server_impl.py", line 113, in forward_to_coordinator
+server-2-1  | INFO:     172.19.0.4:44530 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:44542 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:44558 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:44572 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:44578 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:57596 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:57612 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:57626 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:57634 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     response.raise_for_status()
+server-1-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+server-2-1  | INFO:     172.19.0.4:57638 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:57654 - "GET /health HTTP/1.1" 200 OK
+server-1-1  |     raise HTTPStatusError(message, request=request, response=self)
+server-1-1  | httpx.HTTPStatusError: Server error '502 Bad Gateway' for url 'http://server-2:8000/cluster/dispatch'
+server-2-1  | INFO:     172.19.0.4:57670 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:57680 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502
+server-2-1  | INFO:     172.19.0.4:57682 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:57692 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50206 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50210 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50216 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50222 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50228 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50244 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50252 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50264 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50274 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50286 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54694 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54698 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54712 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54714 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54730 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54746 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54758 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54764 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54776 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:54784 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:39834 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:39838 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | INFO:     172.19.0.5:38200 - "POST /getRemoteTask HTTP/1.0" 502 Bad Gateway
+server-1-1  | 2026-10-08 00:19:37,741 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:39854 - "GET /health HTTP/1.1" 200 OK
+server-1-1  | 2026-10-08 00:19:38,750 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:39866 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:39870 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:39884 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:39896 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:39898 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:39912 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | 2026-10-08 00:19:36,524 INFO httpx HTTP Request: GET http://server-1:8000/health "HTTP/1.1 200 OK"
+server-2-1  | INFO:     172.19.0.4:39928 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | 2026-10-08 00:19:36,999 INFO httpx HTTP Request: POST http://server-1:8000/cluster/execute "HTTP/1.1 502 Bad Gateway"
+server-2-1  | 2026-10-08 00:19:37,000 WARNING hit3.scheduler node=1 failed task=202255c7-8e73-4e38-baa1-6056bcc20b04: Server error '502 Bad Gateway' for url 'http://server-1:8000/cluster/execute'
+server-1-1  | 2026-10-08 00:19:39,759 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:40,766 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502
+server-1-1  | 2026-10-08 00:19:41,776 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:42,788 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | 2026-10-08 00:19:37,000 INFO hit2.pool hit=2 worker=0 task=202255c7-8e73-4e38-baa1-6056bcc20b04 started
+server-2-1  | 2026-10-08 00:19:37,450 ERROR hit2.pool worker=0 task=202255c7-8e73-4e38-baa1-6056bcc20b04 failed
+server-2-1  | Traceback (most recent call last):
+server-1-1  | 2026-10-08 00:19:43,797 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:44,806 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-1-1  | 2026-10-08 00:19:45,813 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:46,821 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-1-1  | 2026-10-08 00:19:47,829 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:48,838 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |     raise exc from None
+server-1-1  | 2026-10-08 00:19:49,845 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await connection.handle_async_request(
+server-1-1  | 2026-10-08 00:19:50,857 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:51,865 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-1-1  | 2026-10-08 00:19:52,888 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:53,896 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:54,905 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-1-1  | 2026-10-08 00:19:55,914 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:56,922 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     stream = await self._connect(request)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:19:57,930 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:19:58,938 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:19:59,946 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:00,954 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:01,962 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:02,972 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:03,989 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:04,998 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  |     return await self._backend.connect_tcp(
+server-1-1  | 2026-10-08 00:20:06,007 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:20:07,015 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:08,024 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-1-1  | 2026-10-08 00:20:09,032 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     with map_exceptions(exc_map):
+server-1-1  | 2026-10-08 00:20:10,042 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:11,049 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-1-1  | 2026-10-08 00:20:12,058 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-1-1  | 2026-10-08 00:20:13,065 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:14,074 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     raise to_exc(exc) from exc
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-1-1  | 2026-10-08 00:20:15,089 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:16,097 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-1-1  | 2026-10-08 00:20:17,105 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:18,112 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:20:19,120 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:20,129 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:21,144 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:22,152 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:23,159 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |     return await self.request(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-1-1  | 2026-10-08 00:20:24,167 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:25,175 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:20:26,192 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:27,200 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:28,209 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  |     response = await self._send_handling_auth(
+server-1-1  | 2026-10-08 00:20:29,217 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-1-1  | 2026-10-08 00:20:30,225 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-1-1  | 2026-10-08 00:20:31,232 INFO httpx HTTP Request: GET http://server-2:8000/health "HTTP/1.1 200 OK"
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-2-1  |     response = await self._send_handling_redirects(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-2-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |     with map_httpcore_exceptions():
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 2026-10-08 00:19:37,452 ERROR hit3.server_impl task=202255c7-8e73-4e38-baa1-6056bcc20b04 failed
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |     raise exc from None
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await connection.handle_async_request(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-2-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-2-1  |     stream = await self._connect(request)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  |     return await self._backend.connect_tcp(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  |     with map_exceptions(exc_map):
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  |     raise to_exc(exc) from exc
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-2-1  |     execution = await pool.submit(task)
+server-2-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-2-1  |     return await future
+server-2-1  |            ^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |     return await self.request(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  |     response = await self._send_handling_auth(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-2-1  |     response = await self._send_handling_redirects(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-2-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |     with map_httpcore_exceptions():
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 2026-10-08 00:19:37,454 WARNING hit3.scheduler node=2 failed task=202255c7-8e73-4e38-baa1-6056bcc20b04: 502: All connection attempts failed
+server-2-1  | 2026-10-08 00:19:37,454 ERROR hit3.server_impl coordinator failed to dispatch task=202255c7-8e73-4e38-baa1-6056bcc20b04
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+server-2-1  |     yield
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+server-2-1  |     resp = await self._pool.handle_async_request(req)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+server-2-1  |     raise exc from None
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+server-2-1  |     response = await connection.handle_async_request(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+server-2-1  |     raise exc
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+server-2-1  |     stream = await self._connect(request)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 124, in _connect
+server-2-1  |     stream = await self._network_backend.connect_tcp(**kwargs)
+server-2-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+server-2-1  |     return await self._backend.connect_tcp(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+server-2-1  |     with map_exceptions(exc_map):
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+server-2-1  |     raise to_exc(exc) from exc
+server-2-1  | INFO:     172.19.0.4:39916 - "POST /cluster/dispatch HTTP/1.1" 502 Bad Gateway
+server-2-1  | httpcore.ConnectError: All connection attempts failed
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 68, in ejecutarTareaEnEsteNodo
+server-2-1  |     execution = await pool.submit(task)
+server-2-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 43, in submit
+server-2-1  |     return await future
+server-2-1  |            ^^^^^^^^^^^^
+server-2-1  |   File "/app/hit2/pool.py", line 61, in _worker
+server-2-1  |     item.future.set_result(await self.executor.execute(item.request))
+server-2-1  |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit1/executor.py", line 57, in execute
+server-2-1  |     response = await client.post(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1859, in post
+server-2-1  |     return await self.request(
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+server-2-1  |     return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+server-2-1  |     response = await self._send_handling_auth(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+server-2-1  |     response = await self._send_handling_redirects(
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+server-2-1  |     response = await self._send_single_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+server-2-1  |     response = await transport.handle_async_request(request)
+server-2-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+server-2-1  |     with map_httpcore_exceptions():
+server-2-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+server-2-1  |     self.gen.throw(value)
+server-2-1  |   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+server-2-1  |     raise mapped_exc(message) from exc
+server-2-1  | httpx.ConnectError: All connection attempts failed
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/scheduler.py", line 45, in dispatch
+server-2-1  |     return await run_local(task)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit3/server_impl.py", line 71, in ejecutarTareaEnEsteNodo
+server-2-1  |     raise HTTPException(status_code=502, detail=str(error)) from error
+server-2-1  | fastapi.exceptions.HTTPException: 502: All connection attempts failed
+server-2-1  | 
+server-2-1  | The above exception was the direct cause of the following exception:
+server-2-1  | 
+server-2-1  | Traceback (most recent call last):
+server-2-1  |   File "/app/hit3/server_impl.py", line 91, in dispatch_at_coordinator
+server-2-1  |     return await scheduler.dispatch(scheduled_task, ejecutarTareaEnEsteNodo)
+server-2-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+server-2-1  |   File "/app/hit3/scheduler.py", line 53, in dispatch
+server-2-1  |     raise RuntimeError("No available node could execute the task") from last_error
+server-2-1  | RuntimeError: No available node could execute the task
+server-2-1  | INFO:     172.19.0.4:53038 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53046 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53054 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53056 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53068 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53084 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53094 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53102 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53106 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:53114 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35490 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35492 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35506 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35518 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35528 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35538 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35546 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35562 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35564 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:35566 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40332 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40344 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40360 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40362 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40364 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40370 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40376 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40390 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40396 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:40398 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37944 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37958 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37960 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37970 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37978 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:37988 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:38002 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:38014 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:38022 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50966 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50976 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50980 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50986 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50994 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50996 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:50998 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:51006 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:51020 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:51024 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46532 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46536 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46550 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46562 - "GET /health HTTP/1.1" 200 OK
+server-2-1  | INFO:     172.19.0.4:46570 - "GET /health HTTP/1.1" 200 OK

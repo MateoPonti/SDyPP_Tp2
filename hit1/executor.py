@@ -54,10 +54,20 @@ class DockerTaskExecutor:
             container.reload()
             address = container.attrs["NetworkSettings"]["Networks"][self.network]["IPAddress"]
             async with httpx.AsyncClient(timeout=self.timeout) as client:
-                response = await client.post(
-                    f"http://{address}:{self.service_port}/execute",
-                    json=task.model_dump(mode="json"),
-                )
+                # El contenedor tarda un instante en abrir el puerto: se reintenta solo
+                # el error de conexión (la tarea aún no corrió, es seguro repetir).
+                deadline = time.perf_counter() + 20
+                while True:
+                    try:
+                        response = await client.post(
+                            f"http://{address}:{self.service_port}/execute",
+                            json=task.model_dump(mode="json"),
+                        )
+                        break
+                    except httpx.ConnectError:
+                        if time.perf_counter() > deadline:
+                            raise
+                        await asyncio.sleep(0.3)
                 response.raise_for_status()
             return ExecutionResult(response.json()["result"], (time.perf_counter() - started) * 1000)
         finally:
